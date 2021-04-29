@@ -720,3 +720,455 @@ System memory in use after: 162.0 MB.
 Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 2465.
 Total: 3.169007 ms (FindLiveObjects: 0.369686 ms CreateObjectMapping: 0.360361 ms MarkObjects: 2.399454 ms  DeleteObjects: 0.038454 ms)
 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001550 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.52 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.137 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.47 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1899 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 162.1 MB.
+System memory in use after: 162.2 MB.
+
+Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 2469.
+Total: 2.428594 ms (FindLiveObjects: 0.318546 ms CreateObjectMapping: 0.102980 ms MarkObjects: 1.967630 ms  DeleteObjects: 0.037970 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001078 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.59 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.670 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.49 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1899 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 162.3 MB.
+System memory in use after: 162.4 MB.
+
+Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 2473.
+Total: 2.270612 ms (FindLiveObjects: 0.268614 ms CreateObjectMapping: 0.066161 ms MarkObjects: 1.906626 ms  DeleteObjects: 0.028164 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 2079.568046 seconds.
+  path: Assets/RedBox.prefab
+  artifactKey: Guid(194b3d5133d264a20b539801e6c040ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RedBox.prefab using Guid(194b3d5133d264a20b539801e6c040ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2993a7ae8b1e0cf91fb1f2b63b045602') in 0.106596 seconds
+  Import took 0.113039 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.803153 seconds.
+  path: Assets/GreenBox.prefab
+  artifactKey: Guid(16550fea2ff534c139a3bedff89d7513) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GreenBox.prefab using Guid(16550fea2ff534c139a3bedff89d7513) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed558c59c9cccfa2c2a39d053aa1b973') in 0.005532 seconds
+  Import took 0.009598 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000910 seconds.
+  path: Assets/GreenBox.prefab
+  artifactKey: Guid(16550fea2ff534c139a3bedff89d7513) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GreenBox.prefab using Guid(16550fea2ff534c139a3bedff89d7513) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed558c59c9cccfa2c2a39d053aa1b973') in 0.005475 seconds
+  Import took 0.009701 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.458336 seconds.
+  path: Assets/BlueBox.prefab
+  artifactKey: Guid(8ca3b1c62394b484bbacaa5f02679736) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlueBox.prefab using Guid(8ca3b1c62394b484bbacaa5f02679736) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'adeee3234a9bda0b525a2f64fbfbd228') in 0.004814 seconds
+  Import took 0.009011 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.006737 seconds.
+  path: Assets/BlueBox.prefab
+  artifactKey: Guid(8ca3b1c62394b484bbacaa5f02679736) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlueBox.prefab using Guid(8ca3b1c62394b484bbacaa5f02679736) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'adeee3234a9bda0b525a2f64fbfbd228') in 0.003486 seconds
+  Import took 0.007670 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000850 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.50 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.277 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.45 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1899 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 162.9 MB.
+System memory in use after: 163.0 MB.
+
+Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 2477.
+Total: 2.147948 ms (FindLiveObjects: 0.283458 ms CreateObjectMapping: 0.079055 ms MarkObjects: 1.765249 ms  DeleteObjects: 0.019265 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002785 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.51 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.156 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.55 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1899 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 163.1 MB.
+System memory in use after: 163.2 MB.
+
+Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 2481.
+Total: 3.571124 ms (FindLiveObjects: 0.516893 ms CreateObjectMapping: 0.181304 ms MarkObjects: 2.843319 ms  DeleteObjects: 0.027207 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 59.519091 seconds.
+  path: Assets/BlueBox.prefab
+  artifactKey: Guid(8ca3b1c62394b484bbacaa5f02679736) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlueBox.prefab using Guid(8ca3b1c62394b484bbacaa5f02679736) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '765d6f37e81cdec1f754aa06a499dd69') in 0.045116 seconds
+  Import took 0.049160 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.189926 seconds.
+  path: Assets/BlueBox.prefab
+  artifactKey: Guid(8ca3b1c62394b484bbacaa5f02679736) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlueBox.prefab using Guid(8ca3b1c62394b484bbacaa5f02679736) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f87cda95aca03585eed792ee8ee36641') in 0.004661 seconds
+  Import took 0.009064 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.021297 seconds.
+  path: Assets/BlueBox.prefab
+  artifactKey: Guid(8ca3b1c62394b484bbacaa5f02679736) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BlueBox.prefab using Guid(8ca3b1c62394b484bbacaa5f02679736) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f87cda95aca03585eed792ee8ee36641') in 0.003727 seconds
+  Import took 0.007365 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.222044 seconds.
+  path: Assets/GreenBox.prefab
+  artifactKey: Guid(16550fea2ff534c139a3bedff89d7513) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GreenBox.prefab using Guid(16550fea2ff534c139a3bedff89d7513) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '928ea80c3f3aac81c2bad54e70a7fc6f') in 0.004628 seconds
+  Import took 0.008791 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.033890 seconds.
+  path: Assets/GreenBox.prefab
+  artifactKey: Guid(16550fea2ff534c139a3bedff89d7513) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GreenBox.prefab using Guid(16550fea2ff534c139a3bedff89d7513) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '928ea80c3f3aac81c2bad54e70a7fc6f') in 0.004478 seconds
+  Import took 0.008205 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.270815 seconds.
+  path: Assets/RedBox.prefab
+  artifactKey: Guid(194b3d5133d264a20b539801e6c040ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RedBox.prefab using Guid(194b3d5133d264a20b539801e6c040ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0426a243e59aaf5effa21f93b5f9c21f') in 0.004204 seconds
+  Import took 0.008468 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.023531 seconds.
+  path: Assets/RedBox.prefab
+  artifactKey: Guid(194b3d5133d264a20b539801e6c040ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RedBox.prefab using Guid(194b3d5133d264a20b539801e6c040ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0426a243e59aaf5effa21f93b5f9c21f') in 0.003539 seconds
+  Import took 0.007590 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000671 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.51 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.293 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.66 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1899 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 163.3 MB.
+System memory in use after: 163.4 MB.
+
+Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 2485.
+Total: 3.419236 ms (FindLiveObjects: 0.710454 ms CreateObjectMapping: 0.129512 ms MarkObjects: 2.427028 ms  DeleteObjects: 0.090803 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 69.477543 seconds.
+  path: Assets/GreenBox.prefab
+  artifactKey: Guid(16550fea2ff534c139a3bedff89d7513) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GreenBox.prefab using Guid(16550fea2ff534c139a3bedff89d7513) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c7229e8bae0b98cbcbad1819dc429caa') in 0.037070 seconds
+  Import took 0.041440 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001399 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.63 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.271 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.48 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1899 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 163.5 MB.
+System memory in use after: 163.6 MB.
+
+Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 2489.
+Total: 2.395759 ms (FindLiveObjects: 0.335366 ms CreateObjectMapping: 0.101861 ms MarkObjects: 1.935354 ms  DeleteObjects: 0.021656 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 103.069035 seconds.
+  path: Assets/DraggableObjects
+  artifactKey: Guid(8dcca79957b7b454f8ffd09532954177) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DraggableObjects using Guid(8dcca79957b7b454f8ffd09532954177) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7491c93285dc080223eacea2ad5613e4') in 0.005131 seconds
+  Import took 0.009782 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.268175 seconds.
+  path: Assets/RedBox.prefab
+  artifactKey: Guid(194b3d5133d264a20b539801e6c040ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RedBox.prefab using Guid(194b3d5133d264a20b539801e6c040ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6225a81aab78c9c0a56c3377e77d53d') in 0.073244 seconds
+  Import took 0.082503 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 18.202169 seconds.
+  path: Assets/Draggable.cs
+  artifactKey: Guid(5ed57065fb309445a9bd74e1dd3e1de6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Draggable.cs using Guid(5ed57065fb309445a9bd74e1dd3e1de6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3eb05fcd96bb12e3d7410a9ea517f48f') in 0.011440 seconds
+  Import took 0.015661 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002790 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.65 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.225 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.48 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1899 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 163.7 MB.
+System memory in use after: 163.8 MB.
+
+Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 2493.
+Total: 2.549220 ms (FindLiveObjects: 0.349714 ms CreateObjectMapping: 0.104253 ms MarkObjects: 2.072333 ms  DeleteObjects: 0.021514 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 24.949860 seconds.
+  path: Assets/Scripts/DropZone.cs
+  artifactKey: Guid(e73eff7d341004ccab3999a2042c06d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DropZone.cs using Guid(e73eff7d341004ccab3999a2042c06d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6330ae9d5b07c071edd70ba70989009f') in 0.010738 seconds
+  Import took 0.015923 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002387 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.63 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.516 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.50 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1900 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 164.0 MB.
+System memory in use after: 164.1 MB.
+
+Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 2498.
+Total: 2.193251 ms (FindLiveObjects: 0.297116 ms CreateObjectMapping: 0.071411 ms MarkObjects: 1.799146 ms  DeleteObjects: 0.024518 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003437 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.54 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.191 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.05 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1900 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 164.2 MB.
+System memory in use after: 164.3 MB.
+
+Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 2502.
+Total: 2.858854 ms (FindLiveObjects: 0.364125 ms CreateObjectMapping: 0.131097 ms MarkObjects: 2.337207 ms  DeleteObjects: 0.024518 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 167.058736 seconds.
+  path: Assets/Scripts/DropZone.cs
+  artifactKey: Guid(e73eff7d341004ccab3999a2042c06d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DropZone.cs using Guid(e73eff7d341004ccab3999a2042c06d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '232847ab78edf42fec377e97c1462fd3') in 0.005361 seconds
+  Import took 0.009585 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002124 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.84 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.693 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.74 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1900 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 164.4 MB.
+System memory in use after: 164.5 MB.
+
+Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 2506.
+Total: 4.892719 ms (FindLiveObjects: 0.737523 ms CreateObjectMapping: 0.476655 ms MarkObjects: 3.644348 ms  DeleteObjects: 0.030527 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001165 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.51 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.568 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.28 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1900 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 164.6 MB.
+System memory in use after: 164.7 MB.
+
+Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 2510.
+Total: 5.077233 ms (FindLiveObjects: 0.388466 ms CreateObjectMapping: 0.104886 ms MarkObjects: 4.554968 ms  DeleteObjects: 0.027153 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 94.770396 seconds.
+  path: Assets/Scripts/Draggable.cs
+  artifactKey: Guid(5ed57065fb309445a9bd74e1dd3e1de6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Draggable.cs using Guid(5ed57065fb309445a9bd74e1dd3e1de6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52c43f39d617f7403e031c585a4e3d50') in 0.010889 seconds
+  Import took 0.017315 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 260.766899 seconds.
+  path: Assets/DraggableObjects/RedBox.prefab
+  artifactKey: Guid(194b3d5133d264a20b539801e6c040ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DraggableObjects/RedBox.prefab using Guid(194b3d5133d264a20b539801e6c040ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de2461980d0318691f379fdb18590d8f') in 0.044538 seconds
+  Import took 0.048105 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000322 seconds.
+  path: Assets/DraggableObjects/GreenBox.prefab
+  artifactKey: Guid(16550fea2ff534c139a3bedff89d7513) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DraggableObjects/GreenBox.prefab using Guid(16550fea2ff534c139a3bedff89d7513) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c734b2ebcaec55e32d9595fcdeaf4c3') in 0.005856 seconds
+  Import took 0.010106 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000234 seconds.
+  path: Assets/DraggableObjects/BlueBox.prefab
+  artifactKey: Guid(8ca3b1c62394b484bbacaa5f02679736) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DraggableObjects/BlueBox.prefab using Guid(8ca3b1c62394b484bbacaa5f02679736) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '504df97e89a7d3ba5c06daf7d4bd78d5') in 0.004354 seconds
+  Import took 0.008241 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.863836 seconds.
+  path: Assets/DraggableObjects/RedBox.prefab
+  artifactKey: Guid(194b3d5133d264a20b539801e6c040ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DraggableObjects/RedBox.prefab using Guid(194b3d5133d264a20b539801e6c040ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6a10a34b6059679c0a64bb7214ba92d') in 0.006171 seconds
+  Import took 0.011808 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.041238 seconds.
+  path: Assets/DraggableObjects/BlueBox.prefab
+  artifactKey: Guid(8ca3b1c62394b484bbacaa5f02679736) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DraggableObjects/BlueBox.prefab using Guid(8ca3b1c62394b484bbacaa5f02679736) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41e2cfc6ba6f6a7f6b62481429956975') in 0.009765 seconds
+  Import took 0.013900 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000219 seconds.
+  path: Assets/DraggableObjects/GreenBox.prefab
+  artifactKey: Guid(16550fea2ff534c139a3bedff89d7513) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DraggableObjects/GreenBox.prefab using Guid(16550fea2ff534c139a3bedff89d7513) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd20d37aaf7aefa380ae7fe2fb8ec9245') in 0.010562 seconds
+  Import took 0.014037 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002448 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.51 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.127 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.50 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1900 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 164.8 MB.
+System memory in use after: 164.9 MB.
+
+Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 2514.
+Total: 2.436515 ms (FindLiveObjects: 0.373805 ms CreateObjectMapping: 0.102927 ms MarkObjects: 1.894120 ms  DeleteObjects: 0.064158 ms)
+
