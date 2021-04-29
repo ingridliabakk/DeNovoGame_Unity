@@ -1172,3 +1172,61 @@ System memory in use after: 164.9 MB.
 Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 2514.
 Total: 2.436515 ms (FindLiveObjects: 0.373805 ms CreateObjectMapping: 0.102927 ms MarkObjects: 1.894120 ms  DeleteObjects: 0.064158 ms)
 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000562 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.51 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.074 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.85 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1900 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 165.0 MB.
+System memory in use after: 165.1 MB.
+
+Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 2518.
+Total: 3.360058 ms (FindLiveObjects: 0.561732 ms CreateObjectMapping: 0.141237 ms MarkObjects: 2.627496 ms  DeleteObjects: 0.027550 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 468.612573 seconds.
+  path: Assets/DraggableObjects/RedBox.prefab
+  artifactKey: Guid(194b3d5133d264a20b539801e6c040ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DraggableObjects/RedBox.prefab using Guid(194b3d5133d264a20b539801e6c040ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4370bd8d5a25be101be15c27f7b6190b') in 0.034628 seconds
+  Import took 0.037711 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.076702 seconds.
+  path: Assets/DraggableObjects/RedBox.prefab
+  artifactKey: Guid(194b3d5133d264a20b539801e6c040ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DraggableObjects/RedBox.prefab using Guid(194b3d5133d264a20b539801e6c040ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4370bd8d5a25be101be15c27f7b6190b') in 0.004411 seconds
+  Import took 0.007458 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000597 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.51 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.115 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.47 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1900 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 165.2 MB.
+System memory in use after: 165.3 MB.
+
+Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 2522.
+Total: 2.410122 ms (FindLiveObjects: 0.343884 ms CreateObjectMapping: 0.107566 ms MarkObjects: 1.934990 ms  DeleteObjects: 0.022139 ms)
+
