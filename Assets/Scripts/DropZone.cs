@@ -5,12 +5,17 @@ using UnityEngine.EventSystems;
 
 public class DropZone : MonoBehaviour, IDropHandler
 {
+    public Draggable.Slot typeOfItem = Draggable.Slot.RED;
+
     public void OnDrop(PointerEventData eventData) {
         Debug.Log(eventData.pointerDrag.name + " was dropped on " + gameObject.name);
 
         Draggable d = eventData.pointerDrag.GetComponent<Draggable>();
         if(d!= null) {
-            d.parentToReturnTo = this.transform;
+            if(typeOfItem == d.typeOfItem) {
+                d.parentToReturnTo = this.transform;
+
+            }
         }
 
     }
