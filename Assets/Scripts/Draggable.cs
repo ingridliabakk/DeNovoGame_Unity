@@ -42,12 +42,21 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 
     public void OnDrag(PointerEventData eventData) {
         this.transform.position = eventData.position;
+
+        //move placeholder when box is hoovered over boxes
+        for(int i =0; i< parentToReturnTo.childCount; i ++) {
+            if(this.transform.position.x < parentToReturnTo.GetChild(i).position.x) {
+                placeholder.transform.SetSiblingIndex(i);
+                break;
+            }
+        }
     }
 
     public void OnEndDrag(PointerEventData eventData) {
         Debug.Log ("OnEndDrag");
         this.transform.SetParent(parentToReturnTo);
         this.transform.SetSiblingIndex( placeholder.transform.GetSiblingIndex());
+
         GetComponent<CanvasGroup>().blocksRaycasts = true;
 
         Destroy(placeholder);
