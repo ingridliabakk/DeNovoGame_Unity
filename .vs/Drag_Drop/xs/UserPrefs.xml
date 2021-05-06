@@ -1,0 +1,15 @@
+﻿<Properties StartupConfiguration="{D5ECEDCD-893D-091A-351F-84D6D73A04B6}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/DropZone.cs">
+    <Files>
+      <File FileName="Assets/Scripts/Draggable.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/DropZone.cs" Line="52" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="6958c2a4-8bbe-43f5-91a1-a8165d6532a6" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

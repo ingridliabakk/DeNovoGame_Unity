@@ -117,6 +117,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ed57065fb309445a9bd74e1dd3e1de6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentToReturnTo: {fileID: 0}
+  placeholderParent: {fileID: 0}
+  typeOfItem: 0
+  typeOfBox: 0
 --- !u!114 &8849240990350673430
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -132,8 +136,8 @@ MonoBehaviour:
   m_IgnoreLayout: 0
   m_MinWidth: -1
   m_MinHeight: -1
-  m_PreferredWidth: 60
-  m_PreferredHeight: 110
+  m_PreferredWidth: 30
+  m_PreferredHeight: 65
   m_FlexibleWidth: 0
   m_FlexibleHeight: 0
   m_LayoutPriority: 1
