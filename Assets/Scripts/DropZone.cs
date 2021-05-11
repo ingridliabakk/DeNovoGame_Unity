@@ -2,47 +2,34 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.EventSystems;
 
+//farge, bredde, rekkefølge
+//access child comp
+//validPlacement(box,pos)
 
-public class DropZone : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerExitHandler
+public class DropZone : MonoBehaviour, IDropHandler
 {
-	public Draggable.Slot typeOfItem = Draggable.Slot.RED;
-
-	public void OnPointerEnter(PointerEventData eventData)
-	{
-		//Debug.Log("OnPointerEnter");
-		if (eventData.pointerDrag == null)
-			return;
-
-		Draggable d = eventData.pointerDrag.GetComponent<Draggable>();
-		if (d != null)
-		{
-			d.placeholderParent = this.transform;
-		}
-	}
-
-	public void OnPointerExit(PointerEventData eventData)
-	{
-		//Debug.Log("OnPointerExit");
-		if (eventData.pointerDrag == null)
-			return;
-
-		Draggable d = eventData.pointerDrag.GetComponent<Draggable>();
-		if (d != null && d.placeholderParent == this.transform)
-		{
-			d.placeholderParent = d.parentToReturnTo;
-        }
-	}
+	public Draggable.Type typeOfItem = Draggable.Type.DEFAULT;
 
 	public void OnDrop(PointerEventData eventData)
 	{
-		Debug.Log(eventData.pointerDrag.name + " was dropped on " + gameObject.name);
+		GameObject box = eventData.pointerDrag;
+		GameObject slot = gameObject;
 
-		Draggable d = eventData.pointerDrag.GetComponent<Draggable>();
-		if (d != null)
+		Debug.Log(box + " was dropped on " + slot);
+
+		Debug.Log("box "+ box.GetComponent<Draggable>().parentToReturnTo);
+		Debug.Log("slot "+ slot);
+
+        GameObject dropArea = transform.parent.gameObject;
+        DropHandler dropHandler = dropArea.GetComponent<DropHandler>();
+		Debug.Log("drophanler" + dropHandler);
+
+		if (box != null)
 		{
-			if(typeOfItem == d.typeOfItem)
+			if(dropHandler.ValidPosition(box, slot))
             {
-				d.parentToReturnTo = this.transform;
+				Debug.Log("box.getComp");
+				box.GetComponent<Draggable>().parentToReturnTo = this.transform;
 
             }
 		}
