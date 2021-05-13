@@ -10,43 +10,55 @@ using UnityEngine.EventSystems;
 
 public class DropHandler : MonoBehaviour
 {
-    public Draggable.Type typeOfItem = Draggable.Type.DEFAULT; //TODO: remove
-    
+    public CircleCollider2D col2d;
+
+
     public void AccessChildComp()
     {
 
     }
 
-
     public bool ValidPosition(GameObject draggableBox, GameObject slot)
     {
         DropZone dropZone = slot.GetComponent<DropZone>();
         Draggable draggable = draggableBox.GetComponent<Draggable>();
+       
+        float widthDraggable = GetWidth(draggableBox);
+        float widthSlot = GetWidth(slot);
 
-        RectTransform rtDraggable = (RectTransform)draggable.transform;
-        float widthDraggable = rtDraggable.sizeDelta.x;
-            //.rect.width;
-
-        Debug.Log("widthDraggable: "+ widthDraggable);
-
-        RectTransform rtSlot = (RectTransform)dropZone.transform;
-        float widthSlot = rtSlot.rect.width;
-
-        Debug.Log("widthSlot: " + widthSlot);
+        GetSlotNeighbours(slot);
 
         if (draggable != null)
         {
-            //TODO: sjekk om slot og boks har samme bredde
             //dropZone.typeOfItem == draggable.typeOfItem ||
 
-            if (dropZone.typeOfItem == draggable.typeOfItem || widthDraggable == widthSlot)
+            if (widthDraggable == widthSlot)
             {
                 draggable.parentToReturnTo = this.transform;
                 return true;
             }
-            //elif i+1 om boks passer
+            else
+            {
+
+            }
         }
         return false;
+    }
+
+    public float GetWidth(GameObject gameObject)
+    {
+        RectTransform rtgameObject = (RectTransform)gameObject.transform;
+        return rtgameObject.rect.width;
+    }
+
+    public List<GameObject> GetSlotNeighbours()
+    {
+        List<GameObject> ListofSlots = new List<GameObject>();
+        foreach (Transform child in transform)
+        {
+            ListofSlots.Add(child.gameObject);
+        }
+        return ListofSlots;
     }
 
 }
