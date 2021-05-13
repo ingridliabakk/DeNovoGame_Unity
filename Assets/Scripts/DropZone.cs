@@ -15,10 +15,7 @@ public class DropZone : MonoBehaviour, IDropHandler
 		GameObject box = eventData.pointerDrag;
 		GameObject slot = gameObject;
 
-		Debug.Log(box + " was dropped on " + slot);
-
-		Debug.Log("box "+ box.GetComponent<Draggable>().parentToReturnTo);
-		Debug.Log("slot "+ slot);
+		Debug.Log(box.name + " was dropped on " + slot.name);
 
         GameObject dropArea = transform.parent.gameObject;
         DropHandler dropHandler = dropArea.GetComponent<DropHandler>();
