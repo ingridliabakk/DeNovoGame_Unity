@@ -1,7 +1,5 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 //farge, bredde, rekkefølge
 //access child comp
@@ -11,7 +9,6 @@ using UnityEngine.EventSystems;
 public class DropHandler : MonoBehaviour
 {
     public CircleCollider2D col2d;
-
 
     public void AccessChildComp()
     {
@@ -26,7 +23,8 @@ public class DropHandler : MonoBehaviour
         float widthDraggable = GetWidth(draggableBox);
         float widthSlot = GetWidth(slot);
 
-        GetSlotNeighbours(slot);
+        GameObject rightNeighbour = GetRightNeighbour(slot);
+        
 
         if (draggable != null)
         {
@@ -35,14 +33,28 @@ public class DropHandler : MonoBehaviour
             if (widthDraggable == widthSlot)
             {
                 draggable.parentToReturnTo = this.transform;
+                Debug.Log("drag" + widthDraggable + "slot" + widthSlot);
                 return true;
             }
-            else
+            else if (rightNeighbour != null && widthDraggable == widthSlot + GetWidth(rightNeighbour))
             {
-
+                return true;
             }
         }
         return false;
+    }
+
+    public GameObject GetRightNeighbour(GameObject slot)
+    {
+        int index = FindIndexOfObjectInList(slot);
+        Debug.Log(AllSlots().Count + "hjkø" + index + 1);
+        if (AllSlots().Count > index+1) {
+            GameObject rightNeighbour = AllSlots()[index + 1];
+
+            Debug.Log("index: " + index + " list size: " + AllSlots()[index+1]);
+            return rightNeighbour;
+        }
+        return null;
     }
 
     public float GetWidth(GameObject gameObject)
@@ -51,7 +63,7 @@ public class DropHandler : MonoBehaviour
         return rtgameObject.rect.width;
     }
 
-    public List<GameObject> GetSlotNeighbours()
+    public List<GameObject> AllSlots()
     {
         List<GameObject> ListofSlots = new List<GameObject>();
         foreach (Transform child in transform)
@@ -59,6 +71,11 @@ public class DropHandler : MonoBehaviour
             ListofSlots.Add(child.gameObject);
         }
         return ListofSlots;
+    }
+
+    public int FindIndexOfObjectInList(GameObject gameObject)
+    {
+        return AllSlots().IndexOf(gameObject);
     }
 
 }
