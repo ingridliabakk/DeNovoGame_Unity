@@ -8,12 +8,6 @@ using UnityEngine;
 
 public class DropHandler : MonoBehaviour
 {
-    public CircleCollider2D col2d;
-
-    public void AccessChildComp()
-    {
-
-    }
 
     public bool ValidPosition(GameObject draggableBox, GameObject slot)
     {
@@ -33,7 +27,6 @@ public class DropHandler : MonoBehaviour
             if (widthDraggable == widthSlot)
             {
                 draggable.parentToReturnTo = this.transform;
-                Debug.Log("drag" + widthDraggable + "slot" + widthSlot);
                 return true;
             }
             else if (rightNeighbour != null && widthDraggable == widthSlot + GetWidth(rightNeighbour))
@@ -47,11 +40,10 @@ public class DropHandler : MonoBehaviour
     public GameObject GetRightNeighbour(GameObject slot)
     {
         int index = FindIndexOfObjectInList(slot);
-        Debug.Log(AllSlots().Count + "hjkø" + index + 1);
+
         if (AllSlots().Count > index+1) {
             GameObject rightNeighbour = AllSlots()[index + 1];
 
-            Debug.Log("index: " + index + " list size: " + AllSlots()[index+1]);
             return rightNeighbour;
         }
         return null;
@@ -76,6 +68,26 @@ public class DropHandler : MonoBehaviour
     public int FindIndexOfObjectInList(GameObject gameObject)
     {
         return AllSlots().IndexOf(gameObject);
+    }
+
+    public bool IsOccupied(GameObject slot)
+    {
+        DropZone dropZone = slot.GetComponent<DropZone>();
+        return dropZone.Occupied;
+    }
+
+    public void ListOfOccupied()
+    {
+        List<int> list = new List<int>();
+        foreach(GameObject slot in AllSlots())
+        {
+            if (IsOccupied(slot))
+            {
+                list.Add(1);
+            }
+            list.Add(0);
+        }
+        print(list);
     }
 
 }

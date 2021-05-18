@@ -9,6 +9,7 @@ using UnityEngine.EventSystems;
 public class DropZone : MonoBehaviour, IDropHandler
 {
 	public Draggable.Type typeOfItem = Draggable.Type.DEFAULT;
+	public bool Occupied = false;
 
 	public void OnDrop(PointerEventData eventData)
 	{
