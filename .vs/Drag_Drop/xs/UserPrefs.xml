@@ -1,18 +1,16 @@
 ﻿<Properties StartupConfiguration="{D5ECEDCD-893D-091A-351F-84D6D73A04B6}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/DropHandler.cs">
     <Files>
-      <File FileName="Assets/Scripts/DropHandler.cs" Line="81" Column="42" />
-      <File FileName="Assets/Scripts/Draggable.cs" />
+      <File FileName="Assets/Scripts/Draggable.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/DropHandler.cs" Line="29" Column="53" />
       <File FileName="Assets/Scripts/DropZone.cs" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="404582c8-e16f-4a0f-b747-e422235123c7" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="d3641471-2983-4f3e-a5fe-9c5295fb0657" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/ingridingrid/Unity/Drag&amp;Drop/Assets/Scripts/DropHandler.cs" relfile="Assets/Scripts/DropHandler.cs" line="58" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>

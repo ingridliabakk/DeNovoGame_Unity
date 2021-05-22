@@ -9,7 +9,19 @@ using UnityEngine.EventSystems;
 public class DropZone : MonoBehaviour, IDropHandler
 {
 	public Draggable.Type typeOfItem = Draggable.Type.DEFAULT;
-	public bool Occupied = false;
+	private bool Occupied = false;
+
+	public void SetOccupied(bool b)
+    {
+		//exception
+		Occupied = b;
+    }
+
+
+	public bool GetOccupied()
+	{
+		return Occupied;
+	}
 
 	public void OnDrop(PointerEventData eventData)
 	{
@@ -26,7 +38,6 @@ public class DropZone : MonoBehaviour, IDropHandler
 			if(dropHandler.ValidPosition(box, slot))
             {
 				box.GetComponent<Draggable>().parentToReturnTo = this.transform;
-
             }
 		}
 

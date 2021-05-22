@@ -22,18 +22,26 @@ public class DropHandler : MonoBehaviour
 
         if (draggable != null)
         {
-            //dropZone.typeOfItem == draggable.typeOfItem ||
-
-            if (widthDraggable == widthSlot)
+            if (!IsOccupied(slot))
             {
-                draggable.parentToReturnTo = this.transform;
-                return true;
-            }
-            else if (rightNeighbour != null && widthDraggable == widthSlot + GetWidth(rightNeighbour))
-            {
-                return true;
-            }
+                if (widthDraggable == widthSlot)
+                {
+                    draggable.parentToReturnTo = this.transform;
+                    SetOccupied(slot, true);
+                    return true;
+                }
+                else if (rightNeighbour != null && widthDraggable == widthSlot + GetWidth(rightNeighbour))
+                {
+                    if (!IsOccupied(rightNeighbour))
+                    {
+                        SetOccupied(slot, true);
+                        SetOccupied(rightNeighbour, true);
+                        return true;
+                    }
+                }
+            } 
         }
+        Debug.Log(draggableBox.name + " did not fit on " + slot.name);
         return false;
     }
 
@@ -73,7 +81,17 @@ public class DropHandler : MonoBehaviour
     public bool IsOccupied(GameObject slot)
     {
         DropZone dropZone = slot.GetComponent<DropZone>();
-        return dropZone.Occupied;
+        return dropZone.GetOccupied();
+    }
+
+    public void SetOccupied(GameObject slot, bool b)
+    {
+        DropZone dropZone = slot.GetComponent<DropZone>();
+        dropZone.SetOccupied(b);
+    }
+
+    void OnTriggerEnter(Collider BoxCollider2D)
+    {
     }
 
     public void ListOfOccupied()

@@ -1,6 +1,4 @@
 using UnityEngine;
-using UnityEngine.UI;
-using System.Collections;
 using UnityEngine.EventSystems;
 
 public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
@@ -37,6 +35,7 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 		//Debug.Log("OnEndDrag");
 		//ref til parent, lag ny clone
 		//clonen sin parent er boxcontainer
+
 		this.transform.SetParent(parentToReturnTo);
 		GetComponent<CanvasGroup>().blocksRaycasts = true;
 	}
