@@ -25,8 +25,6 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 
 	public void OnDrag(PointerEventData eventData)
 	{
-		//Debug.Log ("OnDrag");
-
 		this.transform.position = eventData.position;
 	}
 
@@ -36,7 +34,7 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 		//ref til parent, lag ny clone
 		//clonen sin parent er boxcontainer
 
-		this.transform.SetParent(parentToReturnTo); //fjernet denne for å få box på topp
+		this.transform.SetParent(parentToReturnTo);
 		GetComponent<CanvasGroup>().blocksRaycasts = true;
 	}
 }

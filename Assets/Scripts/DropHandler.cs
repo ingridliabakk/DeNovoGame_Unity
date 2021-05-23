@@ -18,7 +18,6 @@ public class DropHandler : MonoBehaviour
 
         if (draggable == null || IsOccupied(slot) || validSlot == null)
         {
-            Debug.Log("false");
             return false;
         }
 
@@ -32,7 +31,6 @@ public class DropHandler : MonoBehaviour
         {
             if (!IsOccupied(rightNeighbour))
             {
-                //draggable.parentToReturnTo = this.transform;
                 SetOccupied(slot, true);
                 SetOccupied(rightNeighbour, true);
                 return true;
@@ -42,11 +40,12 @@ public class DropHandler : MonoBehaviour
         Debug.Log(draggableBox.name + " did not fit on " + slot.name);
         return false;
     }
-    /**
-     * returns a list of valid slot and neighbour
-     */
+
     private List<GameObject> ValidPosition(GameObject draggableBox, GameObject slot)
     {
+        /**
+         * returns a list of valid slot and neighbour
+         */
         List<GameObject> validSlots = new List<GameObject>();
         float widthDraggable = GetWidth(draggableBox);
         float widthSlot = GetWidth(slot);
@@ -111,10 +110,6 @@ public class DropHandler : MonoBehaviour
     {
         SlotHandler dropZone = slot.GetComponent<SlotHandler>();
         dropZone.SetOccupied(b);
-    }
-
-    void OnTriggerEnter(Collider BoxCollider2D)
-    {
     }
 
     private void ListOfOccupied()

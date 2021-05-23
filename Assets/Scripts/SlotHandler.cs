@@ -21,14 +21,13 @@ public class SlotHandler : MonoBehaviour, IDropHandler
         GameObject dropArea = transform.parent.gameObject;
         DropHandler dropHandler = dropArea.GetComponent<DropHandler>();
 
-		// bare kjør kode hvis box in dropzone
+		// checks that box is in DropArea or has a DropArea
 		if (dropHandler != null)
         {
 			if (box != null && slot != null)
 			{
 				if(dropHandler.HandleDrop(box, slot))
 				{
-
 					//sets box parent to the slot it is dropped at
 					box.GetComponent<Draggable>().parentToReturnTo = this.transform;
 
@@ -36,7 +35,6 @@ public class SlotHandler : MonoBehaviour, IDropHandler
 					box.transform.position = transform.position; 
 				}
 			}
-
         }
 	}
 
