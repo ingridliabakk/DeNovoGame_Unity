@@ -9,47 +9,70 @@ using UnityEngine;
 public class DropHandler : MonoBehaviour
 {
 
-    public bool ValidPosition(GameObject draggableBox, GameObject slot)
+    public bool HandleDrop(GameObject draggableBox, GameObject slot)
     {
-        DropZone dropZone = slot.GetComponent<DropZone>();
+
         Draggable draggable = draggableBox.GetComponent<Draggable>();
-       
+        GameObject rightNeighbour = GetRightNeighbour(slot);
+        List<GameObject> validSlot = ValidPosition(draggableBox, slot);
+
+        if (draggable == null || IsOccupied(slot) || validSlot == null)
+        {
+            Debug.Log("false");
+            return false;
+        }
+
+        if (validSlot.Count == 1)
+        {
+            draggable.parentToReturnTo = this.transform;
+            SetOccupied(slot, true);
+            return true;
+        }
+        else if (validSlot.Count > 1)
+        {
+            if (!IsOccupied(rightNeighbour))
+            {
+                //draggable.parentToReturnTo = this.transform;
+                SetOccupied(slot, true);
+                SetOccupied(rightNeighbour, true);
+                return true;
+            }
+        }
+
+        Debug.Log(draggableBox.name + " did not fit on " + slot.name);
+        return false;
+    }
+    /**
+     * returns a list of valid slot and neighbour
+     */
+    private List<GameObject> ValidPosition(GameObject draggableBox, GameObject slot)
+    {
+        List<GameObject> validSlots = new List<GameObject>();
         float widthDraggable = GetWidth(draggableBox);
         float widthSlot = GetWidth(slot);
 
         GameObject rightNeighbour = GetRightNeighbour(slot);
-        
 
-        if (draggable != null)
+        if (widthDraggable == widthSlot)
         {
-            if (!IsOccupied(slot))
-            {
-                if (widthDraggable == widthSlot)
-                {
-                    draggable.parentToReturnTo = this.transform;
-                    SetOccupied(slot, true);
-                    return true;
-                }
-                else if (rightNeighbour != null && widthDraggable == widthSlot + GetWidth(rightNeighbour))
-                {
-                    if (!IsOccupied(rightNeighbour))
-                    {
-                        SetOccupied(slot, true);
-                        SetOccupied(rightNeighbour, true);
-                        return true;
-                    }
-                }
-            } 
+            validSlots.Add(slot);
+            return validSlots;
         }
-        Debug.Log(draggableBox.name + " did not fit on " + slot.name);
-        return false;
+        else if (rightNeighbour != null && widthDraggable == widthSlot + GetWidth(rightNeighbour))
+        {
+            validSlots.Add(slot);
+            validSlots.Add(rightNeighbour);
+            return validSlots;
+        }
+        return null;
     }
 
-    public GameObject GetRightNeighbour(GameObject slot)
+    private GameObject GetRightNeighbour(GameObject slot)
     {
         int index = FindIndexOfObjectInList(slot);
 
-        if (AllSlots().Count > index+1) {
+        if (AllSlots().Count > index + 1)
+        {
             GameObject rightNeighbour = AllSlots()[index + 1];
 
             return rightNeighbour;
@@ -57,13 +80,13 @@ public class DropHandler : MonoBehaviour
         return null;
     }
 
-    public float GetWidth(GameObject gameObject)
+    private float GetWidth(GameObject gameObject)
     {
         RectTransform rtgameObject = (RectTransform)gameObject.transform;
         return rtgameObject.rect.width;
     }
 
-    public List<GameObject> AllSlots()
+    private List<GameObject> AllSlots()
     {
         List<GameObject> ListofSlots = new List<GameObject>();
         foreach (Transform child in transform)
@@ -73,20 +96,20 @@ public class DropHandler : MonoBehaviour
         return ListofSlots;
     }
 
-    public int FindIndexOfObjectInList(GameObject gameObject)
+    private int FindIndexOfObjectInList(GameObject gameObject)
     {
         return AllSlots().IndexOf(gameObject);
     }
 
-    public bool IsOccupied(GameObject slot)
+    private bool IsOccupied(GameObject slot)
     {
-        DropZone dropZone = slot.GetComponent<DropZone>();
+        SlotHandler dropZone = slot.GetComponent<SlotHandler>();
         return dropZone.GetOccupied();
     }
 
-    public void SetOccupied(GameObject slot, bool b)
+    private void SetOccupied(GameObject slot, bool b)
     {
-        DropZone dropZone = slot.GetComponent<DropZone>();
+        SlotHandler dropZone = slot.GetComponent<SlotHandler>();
         dropZone.SetOccupied(b);
     }
 
@@ -94,10 +117,10 @@ public class DropHandler : MonoBehaviour
     {
     }
 
-    public void ListOfOccupied()
+    private void ListOfOccupied()
     {
         List<int> list = new List<int>();
-        foreach(GameObject slot in AllSlots())
+        foreach (GameObject slot in AllSlots())
         {
             if (IsOccupied(slot))
             {

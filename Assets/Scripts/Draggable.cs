@@ -36,7 +36,7 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 		//ref til parent, lag ny clone
 		//clonen sin parent er boxcontainer
 
-		this.transform.SetParent(parentToReturnTo);
+		this.transform.SetParent(parentToReturnTo); //fjernet denne for å få box på topp
 		GetComponent<CanvasGroup>().blocksRaycasts = true;
 	}
 }
