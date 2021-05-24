@@ -14,29 +14,29 @@ public class DropHandler : MonoBehaviour
 
         Draggable draggable = draggableBox.GetComponent<Draggable>();
         GameObject rightNeighbour = GetRightNeighbour(slot);
-        List<GameObject> validSlots = ValidPosition(draggableBox, slot);
+        List<GameObject> validSlots = ValidWidth(draggableBox, slot);
 
-        if (draggable == null || IsOccupied(slot) || validSlots == null)
+        if (draggable == null || validSlots == null)
         {
             return false;
         }
 
-        if (validSlots.Count == 1)
+        foreach (GameObject s in validSlots)
         {
-            draggable.parentToReturnTo = this.transform;
-            SetOccupied(slot, true);
-            SetPosition(draggableBox, validSlots);
-            return true;
-        }
-        else if (validSlots.Count > 1)
-        {
-            if (!IsOccupied(rightNeighbour))
+            if (IsOccupied(s))
             {
-                SetOccupied(slot, true);
-                SetOccupied(rightNeighbour, true);
-                SetPosition(draggableBox, validSlots);
-                return true;
+                return false;
+            }           
+        }
+
+
+        if (validSlots.Count > 0)
+        {
+            foreach (GameObject s in validSlots)
+            {
+                SetOccupied(s, true);
             }
+            SetPosition(draggableBox, validSlots);
         }
 
         Debug.Log(draggableBox.name + " did not fit on " + slot.name);
@@ -53,8 +53,8 @@ public class DropHandler : MonoBehaviour
 
         for (int i = 0; i < slots.Count; i++)
         {
-             boxParent = slots[i].GetComponent<SlotHandler>().transform;
-             boxPos = slots[i].transform.position;
+            boxParent = slots[i].GetComponent<SlotHandler>().transform;
+            boxPos = slots[i].transform.position;
         }
         //sets box parent to the slot it is dropped at
         draggableBox.GetComponent<Draggable>().parentToReturnTo = boxParent;
@@ -63,7 +63,7 @@ public class DropHandler : MonoBehaviour
         draggableBox.transform.position = boxPos;
     }
 
-    private List<GameObject> ValidPosition(GameObject draggableBox, GameObject slot)
+    private List<GameObject> ValidWidth(GameObject draggableBox, GameObject slot)
     {
         /**
          * returns a list of valid slot and neighbour
