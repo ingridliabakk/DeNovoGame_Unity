@@ -25,20 +25,31 @@ public class DropHandler : MonoBehaviour
         {
             draggable.parentToReturnTo = this.transform;
             SetOccupied(slot, true);
+            SetPosition(draggableBox, slot);
             return true;
         }
         else if (validSlot.Count > 1)
         {
             if (!IsOccupied(rightNeighbour))
-            {
+            { 
                 SetOccupied(slot, true);
                 SetOccupied(rightNeighbour, true);
+                SetPosition(draggableBox, slot);
                 return true;
             }
         }
 
-        Debug.Log(draggableBox.name + " did not fit on " + slot.name);
+    Debug.Log(draggableBox.name + " did not fit on " + slot.name);
         return false;
+    }
+
+    private void SetPosition(GameObject draggableBox, GameObject slot)
+    {
+        //sets box parent to the slot it is dropped at
+        draggableBox.GetComponent<Draggable>().parentToReturnTo = slot.GetComponent<SlotHandler>().transform;
+
+        //makes box snap into center of slot
+        draggableBox.transform.position = slot.transform.position;
     }
 
     private List<GameObject> ValidPosition(GameObject draggableBox, GameObject slot)

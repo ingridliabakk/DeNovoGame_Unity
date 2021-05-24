@@ -28,11 +28,7 @@ public class SlotHandler : MonoBehaviour, IDropHandler
 			{
 				if(dropHandler.HandleDrop(box, slot))
 				{
-					//sets box parent to the slot it is dropped at
-					box.GetComponent<Draggable>().parentToReturnTo = this.transform;
-
-					//makes box snap into center of slot
-					box.transform.position = transform.position; 
+					
 				}
 			}
         }
