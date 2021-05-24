@@ -22,14 +22,12 @@ public class SlotHandler : MonoBehaviour, IDropHandler
         DropHandler dropHandler = dropArea.GetComponent<DropHandler>();
 
 		// checks that box is in DropArea or has a DropArea
+		
 		if (dropHandler != null)
         {
 			if (box != null && slot != null)
 			{
-				if(dropHandler.HandleDrop(box, slot))
-				{
-					
-				}
+				dropHandler.HandleDrop(box, slot);
 			}
         }
 	}

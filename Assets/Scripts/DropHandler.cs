@@ -9,28 +9,25 @@ using UnityEngine;
 public class DropHandler : MonoBehaviour
 {
 
-    public bool HandleDrop(GameObject draggableBox, GameObject slot)
+    public void HandleDrop(GameObject draggableBox, GameObject slot)
     {
-
         Draggable draggable = draggableBox.GetComponent<Draggable>();
-        GameObject rightNeighbour = GetRightNeighbour(slot);
         List<GameObject> validSlots = ValidWidth(draggableBox, slot);
 
         if (draggable == null || validSlots == null)
         {
-            return false;
+            return;
         }
 
         foreach (GameObject s in validSlots)
         {
             if (IsOccupied(s))
             {
-                return false;
-            }           
+                return;
+            }
         }
 
-
-        if (validSlots.Count > 0)
+        if (validSlots.Count >= 0)
         {
             foreach (GameObject s in validSlots)
             {
@@ -38,29 +35,34 @@ public class DropHandler : MonoBehaviour
             }
             SetPosition(draggableBox, validSlots);
         }
-
-        Debug.Log(draggableBox.name + " did not fit on " + slot.name);
-        return false;
     }
 
     private void SetPosition(GameObject draggableBox, List<GameObject> slots)
     {
         /**
-         * Sets draggable box in center of slots
-         */
-        Transform boxParent = slots[0].transform;
-        Vector3 boxPos = slots[0].transform.position;
+        * Sets draggable box in center of slots
+        */
+        Transform boxParent = slots[0].GetComponent<SlotHandler>().transform;
 
-        for (int i = 0; i < slots.Count; i++)
-        {
-            boxParent = slots[i].GetComponent<SlotHandler>().transform;
-            boxPos = slots[i].transform.position;
-        }
         //sets box parent to the slot it is dropped at
         draggableBox.GetComponent<Draggable>().parentToReturnTo = boxParent;
 
         //makes box snap into center of slot
-        draggableBox.transform.position = boxPos;
+        draggableBox.transform.position = new Vector3(CalucualteCenterOfSlots(slots), boxParent.transform.position.y, 0);
+    }
+
+    private float CalucualteCenterOfSlots(List<GameObject> slots)
+    {
+        float firstXPos = GetSlotXPos(slots[0]);
+        float lastXPos = GetSlotXPos(slots[slots.Count-1]);
+        float center = (firstXPos + ((lastXPos - firstXPos) / 2));
+
+        return center;
+    }
+
+    private float GetSlotXPos(GameObject slot)
+    {
+        return slot.transform.position.x;
     }
 
     private List<GameObject> ValidWidth(GameObject draggableBox, GameObject slot)
@@ -79,6 +81,7 @@ public class DropHandler : MonoBehaviour
             validSlots.Add(slot);
             return validSlots;
         }
+
         else if (rightNeighbour != null && widthDraggable == widthSlot + GetWidth(rightNeighbour))
         {
             validSlots.Add(slot);
