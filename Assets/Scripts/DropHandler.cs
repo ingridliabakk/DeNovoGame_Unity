@@ -14,42 +14,53 @@ public class DropHandler : MonoBehaviour
 
         Draggable draggable = draggableBox.GetComponent<Draggable>();
         GameObject rightNeighbour = GetRightNeighbour(slot);
-        List<GameObject> validSlot = ValidPosition(draggableBox, slot);
+        List<GameObject> validSlots = ValidPosition(draggableBox, slot);
 
-        if (draggable == null || IsOccupied(slot) || validSlot == null)
+        if (draggable == null || IsOccupied(slot) || validSlots == null)
         {
             return false;
         }
 
-        if (validSlot.Count == 1)
+        if (validSlots.Count == 1)
         {
             draggable.parentToReturnTo = this.transform;
             SetOccupied(slot, true);
-            SetPosition(draggableBox, slot);
+            SetPosition(draggableBox, validSlots);
             return true;
         }
-        else if (validSlot.Count > 1)
+        else if (validSlots.Count > 1)
         {
             if (!IsOccupied(rightNeighbour))
-            { 
+            {
                 SetOccupied(slot, true);
                 SetOccupied(rightNeighbour, true);
-                SetPosition(draggableBox, slot);
+                SetPosition(draggableBox, validSlots);
                 return true;
             }
         }
 
-    Debug.Log(draggableBox.name + " did not fit on " + slot.name);
+        Debug.Log(draggableBox.name + " did not fit on " + slot.name);
         return false;
     }
 
-    private void SetPosition(GameObject draggableBox, GameObject slot)
+    private void SetPosition(GameObject draggableBox, List<GameObject> slots)
     {
+        /**
+         * Sets draggable box in center of slots
+         */
+        Transform boxParent = slots[0].transform;
+        Vector3 boxPos = slots[0].transform.position;
+
+        for (int i = 0; i < slots.Count; i++)
+        {
+             boxParent = slots[i].GetComponent<SlotHandler>().transform;
+             boxPos = slots[i].transform.position;
+        }
         //sets box parent to the slot it is dropped at
-        draggableBox.GetComponent<Draggable>().parentToReturnTo = slot.GetComponent<SlotHandler>().transform;
+        draggableBox.GetComponent<Draggable>().parentToReturnTo = boxParent;
 
         //makes box snap into center of slot
-        draggableBox.transform.position = slot.transform.position;
+        draggableBox.transform.position = boxPos;
     }
 
     private List<GameObject> ValidPosition(GameObject draggableBox, GameObject slot)
